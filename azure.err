@@ -1,0 +1,24 @@
+Wed Jan 14 2015 15:12:43 GMT-0800 (PST):
+{ [Error: Error: Website with given name shortly already exists.]
+  stack: [Getter/Setter],
+  __frame: 
+   { name: 'createSite',
+     line: 379,
+     file: '/Users/student/.nvm/v0.10.26/lib/node_modules/azure-cli/lib/commands/asm/site._js',
+     prev: 
+      { name: '__4',
+        line: 196,
+        file: '/Users/student/.nvm/v0.10.26/lib/node_modules/azure-cli/lib/commands/asm/site._js',
+        prev: undefined,
+        active: false,
+        offset: 50,
+        col: 12 },
+     active: false,
+     offset: 21,
+     col: 21 },
+  rawStack: [Getter] }
+Error: Error: Website with given name shortly already exists.
+    at createSite__4 (/Users/student/.nvm/v0.10.26/lib/node_modules/azure-cli/lib/commands/asm/websites/websitesclient._js:312:34)
+    at createSite (/Users/student/.nvm/v0.10.26/lib/node_modules/azure-cli/lib/commands/asm/site._js:400:21)
+    at __4 (/Users/student/.nvm/v0.10.26/lib/node_modules/azure-cli/lib/commands/asm/site._js:246:12)
+
