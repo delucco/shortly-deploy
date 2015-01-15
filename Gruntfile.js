@@ -3,11 +3,14 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     concat: {
+      options:{
+        seperator:';'
+      },
       dist: {
           src: [
               'public/client/*.js', // All JS in the libs folder
           ],
-          dest: 'public/client/production.js',
+          dest: 'public/client/production.js'
       }
     },
 
@@ -35,6 +38,7 @@ module.exports = function(grunt) {
 
     jshint: {
       files: [
+        'public/client/production.min.js'
         // Add filespec list here
       ],
       options: {
@@ -115,11 +119,12 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('deploy', [
+
     // add your deploy tasks here
   ]);
 
   grunt.registerTask('default', [
-    'concat', "uglify"
+    'concat', "uglify", 'jshint'
     // add your deploy tasks here
   ]);
 
